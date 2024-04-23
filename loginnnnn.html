@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>WIFI LOGIN</title>
+</head>
+
+<body>
+  <h1>Wifi Snagt.net</h1>
+  <input id="username" placeholder="Input username" type="text" />
+  <input id="password" placeholder="Input password" type="password" />
+  <button onclick="login()">Login</button>
+  <p id="gagal"></p>
+
+  <script>
+    function login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      if (username === "calvi" && password === "123") {
+        //Redirect ke halaman home.html jika login berhasil
+		window.location.href = "home.html";
+      } else {
+        document.getElementById("gagal").innerHTML = "Username/Password Salah";
+      }
+    }
+  </script>
+</body>
+
+</html>
